@@ -1,8 +1,12 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   output: "export",
+  basePath: isProd ? "/my-blog" : "",
+  assetPrefix: isProd ? "/my-blog/" : "",
   images: {
     unoptimized: true,
   },
