@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
 import { Home, BookOpen, User, Github } from "lucide-react";
+import logoImg from "../assets/logo.png";
 
 export function Header() {
   return (
@@ -12,7 +13,7 @@ export function Header() {
           className="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
         >
           <Image
-            src="/logo.png"
+            src={logoImg}
             alt="jylog Logo"
             width={24}
             height={24}
