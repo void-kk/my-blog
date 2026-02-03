@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
+import { Home, BookOpen, User } from "lucide-react";
 
 export function Header() {
   return (
@@ -19,18 +20,27 @@ export function Header() {
           />
           My Blog
         </Link>
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-4">
           <Link
             href="/"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="Home"
           >
-            Home
+            <Home className="w-5 h-5" />
           </Link>
           <Link
             href="/posts"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="Posts"
           >
-            Posts
+            <BookOpen className="w-5 h-5" />
+          </Link>
+          <Link
+            href="/about"
+            className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="About Me"
+          >
+            <User className="w-5 h-5" />
           </Link>
           <ThemeToggle />
         </nav>
