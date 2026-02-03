@@ -10,7 +10,6 @@ export function Comments() {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Avoid duplicating the script if it already exists
     if (containerRef.current.querySelector("script")) return;
 
     const script = document.createElement("script");
@@ -25,7 +24,6 @@ export function Comments() {
     containerRef.current.appendChild(script);
   }, []);
 
-  // Update theme dynamically without modifying DOM if script is already loaded
   useEffect(() => {
     const iframe = document.querySelector<HTMLIFrameElement>("iframe.utterances-frame");
     if (!iframe) return;
