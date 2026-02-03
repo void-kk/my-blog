@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/posts";
 import { MDXRemote } from "@/components/MDXRemote";
+import { Comments } from "@/components/Comments";
 
 interface PostPageProps {
   params: Promise<{
@@ -68,6 +69,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="prose">
         <MDXRemote source={post.content} />
       </div>
+      <Comments />
     </article>
   );
 }
