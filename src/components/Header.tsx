@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
-import { Home, BookOpen, User } from "lucide-react";
+import { Home, BookOpen, User, Github } from "lucide-react";
 
 export function Header() {
   return (
@@ -13,34 +13,43 @@ export function Header() {
         >
           <Image
             src="/logo.png"
-            alt="My Blog Logo"
+            alt="jylog Logo"
             width={24}
             height={24}
             className="rounded-full"
           />
-          My Blog
+          jylog
         </Link>
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-1 md:gap-4">
           <Link
             href="/"
-            className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="p-1 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             aria-label="Home"
           >
             <Home className="w-5 h-5" />
           </Link>
           <Link
             href="/posts"
-            className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="p-1 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             aria-label="Posts"
           >
             <BookOpen className="w-5 h-5" />
           </Link>
           <Link
             href="/about"
-            className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            className="p-1 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             aria-label="About Me"
           >
             <User className="w-5 h-5" />
+          </Link>
+          <Link
+            href="https://github.com/void-kk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="GitHub Profile"
+          >
+            <Github className="w-5 h-5" />
           </Link>
           <ThemeToggle />
         </nav>
