@@ -37,7 +37,9 @@ export function Header() {
             <BookOpen className="w-5 h-5" />
           </Link>
           <Link
-            href="/about"
+            href="https://void-kk.github.io/about-me"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-1 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             aria-label="About Me"
           >
